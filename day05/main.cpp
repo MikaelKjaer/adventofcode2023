@@ -101,7 +101,6 @@ int main(int, char**)
     auto humidity_to_location_map = parse_map(humidity_to_location_txt);
     std::vector<range_map_ref_t> map_sequence{ seed_to_soil_map, soil_to_fertilizer_map, fertilizer_to_water_map, water_to_light_map, light_to_temperature_map, temperature_to_humidity_map, humidity_to_location_map };
 
-
     fmt::print(FMT_STRING("Part 1: {0}\n"), part1(seeds, map_sequence));
   }
   catch(...)
